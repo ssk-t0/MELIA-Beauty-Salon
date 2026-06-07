@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="MELIA Beauty Salon（メリア ビューティーサロン）は、東京・表参道のプライベートビューティーサロンです。フェイシャルケア、ボディトリートメント、ブライダルビューティーなど、あなたの美しさを引き出す特別な時間をご提供します。" />
+  <meta name="keywords" content="美容サロン,エステ,フェイシャル,ボディトリートメント,表参道,渋谷,ブライダル" />
+  <meta property="og:title" content="MELIA Beauty Salon | 表参道のプライベートビューティーサロン" />
+  <meta property="og:description" content="肌も心も、満たされる時間を。完全予約制のプライベートビューティーサロン。" />
+  <meta property="og:type" content="website" />
+  <title>MELIA Beauty Salon | 表参道のプライベートビューティーサロン</title>
+
+  <!-- Google Fonts: セリフ体（見出し）＋ゴシック体（本文） -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Noto+Sans+JP:wght@300;400;500&family=Noto+Serif+JP:wght@300;400&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ========================================
+       ヘッダー
+  ======================================== -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+
+      <!-- ロゴ -->
+      <div class="header-logo">
+        <a href="#top" aria-label="MELIA Beauty Salon トップへ">
+          <span class="logo-main">MELIA</span>
+          <span class="logo-sub">Beauty Salon</span>
+        </a>
+      </div>
+
+      <!-- PCナビゲーション -->
+      <nav class="header-nav" aria-label="メインナビゲーション">
+        <ul class="nav-list">
+          <li><a href="#concept" class="nav-link">Concept</a></li>
+          <li><a href="#menu" class="nav-link">Menu</a></li>
+          <li><a href="#staff" class="nav-link">Staff</a></li>
+          <li><a href="#voice" class="nav-link">Voice</a></li>
+          <li><a href="#access" class="nav-link">Access</a></li>
+        </ul>
+      </nav>
+
+      <!-- 予約ボタン（PC） -->
+      <div class="header-cta">
+        <button class="btn btn-reserve" aria-label="ご予約はこちら" onclick="showReserveDemo()">
+          ご予約
+        </button>
+      </div>
+
+      <!-- ハンバーガーボタン（スマホ） -->
+      <button class="hamburger" id="hamburger" aria-label="メニューを開く" aria-expanded="false" aria-controls="sp-menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+
+    </div><!-- /.header-inner -->
+
+    <!-- スマホ用メニュー -->
+    <nav class="sp-menu" id="sp-menu" aria-label="スマートフォン用ナビゲーション" hidden>
+      <ul class="sp-nav-list">
+        <li><a href="#concept" class="sp-nav-link">Concept</a></li>
+        <li><a href="#menu" class="sp-nav-link">Menu</a></li>
+        <li><a href="#staff" class="sp-nav-link">Staff</a></li>
+        <li><a href="#voice" class="sp-nav-link">Voice</a></li>
+        <li><a href="#access" class="sp-nav-link">Access</a></li>
+        <li>
+          <button class="btn btn-reserve sp-reserve" aria-label="ご予約はこちら" onclick="showReserveDemo()">
+            ご予約・お問い合わせ
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <!-- /.site-header -->
+
+
+  <!-- ========================================
+       メインコンテンツ
+  ======================================== -->
+  <main id="top">
+
+    <!-- ========================================
+         1. メインビジュアル（ヒーロー・縦分割レイアウト）
+    ======================================== -->
+    <section class="hero" aria-label="メインビジュアル">
+
+      <!-- 左パネル：テキスト＋ピンクグラデーション背景 -->
+      <div class="hero-left">
+        <!-- 装飾ライン -->
+        <span class="hero-deco-line" aria-hidden="true"></span>
+
+        <div class="hero-content">
+          <p class="hero-eyebrow">
+            <span class="hero-eyebrow-dot" aria-hidden="true"></span>
+            Tokyo · Omotesando
+          </p>
+          <p class="hero-pre">Private Beauty Salon</p>
+          <h1 class="hero-title">
+            肌も心も、<br />満たされる<br />時間を。
+          </h1>
+          <p class="hero-sub">完全予約制のプライベートビューティーサロン</p>
+
+          <div class="hero-btns">
+            <a href="#menu" class="btn btn-hero-primary">メニューを見る</a>
+            <button class="btn btn-hero-outline" onclick="showReserveDemo()" aria-label="予約する">
+              ご予約
+            </button>
+          </div>
+
+          <!-- 小さな統計/バッジ -->
+          <div class="hero-badge-row" aria-label="サロン情報">
+            <div class="hero-badge">
+              <span class="hero-badge-num">10:00</span>
+              <span class="hero-badge-label">Open</span>
+            </div>
+            <span class="hero-badge-sep" aria-hidden="true">|</span>
+            <div class="hero-badge">
+              <span class="hero-badge-num">完全</span>
+              <span class="hero-badge-label">予約制</span>
+            </div>
+            <span class="hero-badge-sep" aria-hidden="true">|</span>
+            <div class="hero-badge">
+              <span class="hero-badge-num">個室</span>
+              <span class="hero-badge-label">プライベート</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- スクロールインジケーター -->
+        <div class="hero-scroll" aria-hidden="true">
+          <span class="scroll-line"></span>
+          <span class="scroll-text">Scroll</span>
+        </div>
+      </div>
+
+      <!-- 右パネル：写真 -->
+      <div class="hero-right">
+        <div class="hero-img-frame">
+          <img
+            src="assets/images/hero.jpg"
+            alt="MELIA Beauty Salon — 上質なプライベートビューティーサロンの施術空間"
+            class="hero-img"
+            onerror="this.parentElement.classList.add('hero-img-fallback')"
+          />
+        </div>
+        <!-- 右側の装飾テキスト -->
+        <p class="hero-side-text" aria-hidden="true">MELIA · BEAUTY · SALON · TOKYO</p>
+      </div>
+
+    </section>
+    <!-- /.hero -->
+
+
+    <!-- ========================================
+         2. コンセプト
+    ======================================== -->
+    <section class="section concept" id="concept">
+      <div class="container">
+
+        <div class="section-header fade-in">
+          <p class="section-label">Concept</p>
+          <h2 class="section-title">美しさを引き出す、<br />あなただけの特別な時間</h2>
+        </div>
+
+        <div class="concept-body">
+          <!-- テキスト -->
+          <div class="concept-text fade-in">
+            <p class="concept-lead">
+              MELIAは、お客様一人ひとりの美しさと向き合う、完全予約制のプライベートサロンです。
+            </p>
+            <p class="concept-desc">
+              忙しい日常の中でも、ここにいる間だけは自分だけの時間を。<br />
+              肌の悩みに寄り添い、心身のバランスを整える丁寧な施術で、<br />
+              内側から輝く美しさを引き出します。
+            </p>
+            <p class="concept-desc">
+              上質なコスメティックと熟練したエステティシャンの技術で、<br />
+              あなたの肌本来のポテンシャルを最大限に引き出す<br />
+              パーソナライズされたケアをお届けします。
+            </p>
+            <!-- コンセプトの3つの価値 -->
+            <ul class="concept-values">
+              <li class="concept-value">
+                <span class="value-icon" aria-hidden="true">✦</span>
+                <span>完全個室・プライベート空間</span>
+              </li>
+              <li class="concept-value">
+                <span class="value-icon" aria-hidden="true">✦</span>
+                <span>一人ひとりに合わせたカスタムケア</span>
+              </li>
+              <li class="concept-value">
+                <span class="value-icon" aria-hidden="true">✦</span>
+                <span>オーガニック・天然由来成分使用</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- 画像 -->
+          <div class="concept-image fade-in">
+            <div class="concept-img-wrap">
+              <img
+                src="assets/images/concept.jpg"
+                alt="MELIAの落ち着いた施術空間"
+                class="concept-img"
+                onerror="this.parentElement.classList.add('img-placeholder')"
+              />
+            </div>
+          </div>
+        </div><!-- /.concept-body -->
+
+      </div><!-- /.container -->
+    </section>
+    <!-- /.concept -->
+
+
+    <!-- ========================================
+         3. サービスメニュー
+    ======================================== -->
+    <section class="section services" id="menu">
+      <div class="container">
+
+        <div class="section-header fade-in">
+          <p class="section-label">Menu</p>
+          <h2 class="section-title">サービスメニュー</h2>
+          <p class="section-desc">お客様のお悩みや目的に合わせて、最適なメニューをご提案します。</p>
+        </div>
+
+        <!-- サービスカード 3枚 -->
+        <div class="services-grid">
+
+          <!-- Facial Care -->
+          <article class="service-card fade-in">
+            <div class="service-img-wrap">
+              <img
+                src="assets/images/service-facial.jpg"
+                alt="フェイシャルケアの施術イメージ"
+                class="service-img"
+                onerror="this.parentElement.classList.add('img-placeholder')"
+              />
+            </div>
+            <div class="service-card-body">
+              <p class="service-num" aria-hidden="true">01</p>
+              <h3 class="service-name">Facial Care</h3>
+              <p class="service-name-ja">フェイシャルケア</p>
+              <p class="service-desc">
+                毛穴、乾燥、くすみに寄り添うフェイシャルケア。<br />
+                お肌の状態を丁寧に分析し、その日のコンディションに合わせた<br />
+                最適なトリートメントをご提供します。
+              </p>
+              <a href="#price" class="service-link">料金を見る →</a>
+            </div>
+          </article>
+
+          <!-- Body Treatment -->
+          <article class="service-card fade-in">
+            <div class="service-img-wrap">
+              <img
+                src="assets/images/service-body.jpg"
+                alt="ボディトリートメントの施術イメージ"
+                class="service-img"
+                onerror="this.parentElement.classList.add('img-placeholder')"
+              />
+            </div>
+            <div class="service-card-body">
+              <p class="service-num" aria-hidden="true">02</p>
+              <h3 class="service-name">Body Treatment</h3>
+              <p class="service-name-ja">ボディトリートメント</p>
+              <p class="service-desc">
+                心身をゆるめるオールハンドボディトリートメント。<br />
+                アロマオイルの香りに包まれながら、<br />
+                深層まで届くリンパケアで体を整えます。
+              </p>
+              <a href="#price" class="service-link">料金を見る →</a>
+            </div>
+          </article>
+
+          <!-- Bridal Beauty -->
+          <article class="service-card fade-in">
+            <div class="service-img-wrap">
+              <img
+                src="assets/images/service-bridal.jpg"
+                alt="ブライダルビューティーの施術イメージ"
+                class="service-img"
+                onerror="this.parentElement.classList.add('img-placeholder')"
+              />
+            </div>
+            <div class="service-card-body">
+              <p class="service-num" aria-hidden="true">03</p>
+              <h3 class="service-name">Bridal Beauty</h3>
+              <p class="service-name-ja">ブライダルビューティー</p>
+              <p class="service-desc">
+                大切な日のためのブライダル集中ケア。<br />
+                挙式の3ヶ月前から始める集中プログラムで、<br />
+                最高に輝く花嫁姿をサポートします。
+              </p>
+              <a href="#price" class="service-link">料金を見る →</a>
+            </div>
+          </article>
+
+        </div><!-- /.services-grid -->
+
+      </div><!-- /.container -->
+    </section>
+    <!-- /.services -->
+
+
+    <!-- ========================================
+         4. 料金表
+    ======================================== -->
+    <section class="section price" id="price">
+      <div class="container">
+
+        <div class="section-header fade-in">
+          <p class="section-label">Price</p>
+          <h2 class="section-title">料金表</h2>
+          <p class="section-desc">すべて税込価格です。施術時間にカウンセリング・アフターケアは含まれません。</p>
+        </div>
+
+        <div class="price-tables fade-in">
+
+          <!-- フェイシャル料金 -->
+          <div class="price-group">
+            <h3 class="price-group-title">Facial Care</h3>
+            <table class="price-table" aria-label="フェイシャルケアの料金表">
+              <thead>
+                <tr>
+                  <th scope="col">メニュー</th>
+                  <th scope="col">時間</th>
+                  <th scope="col">料金（税込）</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>ベーシックフェイシャル</td>
+                  <td>60分</td>
+                  <td class="price-num">¥8,800</td>
+                </tr>
+                <tr>
+                  <td>プレミアムフェイシャル</td>
+                  <td>90分</td>
+                  <td class="price-num">¥13,200</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- ボディ料金 -->
+          <div class="price-group">
+            <h3 class="price-group-title">Body Treatment</h3>
+            <table class="price-table" aria-label="ボディトリートメントの料金表">
+              <thead>
+                <tr>
+                  <th scope="col">メニュー</th>
+                  <th scope="col">時間</th>
+                  <th scope="col">料金（税込）</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>アロマボディ</td>
+                  <td>60分</td>
+                  <td class="price-num">¥9,900</td>
+                </tr>
+                <tr>
+                  <td>全身リンパトリートメント</td>
+                  <td>90分</td>
+                  <td class="price-num">¥14,300</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- ブライダル料金 -->
+          <div class="price-group">
+            <h3 class="price-group-title">Bridal Beauty</h3>
+            <table class="price-table" aria-label="ブライダルビューティーの料金表">
+              <thead>
+                <tr>
+                  <th scope="col">メニュー</th>
+                  <th scope="col">時間</th>
+                  <th scope="col">料金（税込）</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>ブライダル1DAYプラン</td>
+                  <td>120分</td>
+                  <td class="price-num">¥19,800</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div><!-- /.price-tables -->
+
+        <p class="price-note fade-in">
+          ※ 初回ご来店の方は、カウンセリング料として別途 ¥1,100（税込）をいただいております。<br />
+          ※ ご予約はお電話またはWebフォームにてお受けしております。
+        </p>
+
+      </div><!-- /.container -->
+    </section>
+    <!-- /.price -->
+
+
+    <!-- ========================================
+         5. 施術の流れ
+    ======================================== -->
+    <section class="section flow" id="flow">
+      <div class="container">
+
+        <div class="section-header fade-in">
+          <p class="section-label">Flow</p>
+          <h2 class="section-title">施術の流れ</h2>
+          <p class="section-desc">初めてのお客様も安心してお越しいただけるよう、丁寧にご案内します。</p>
+        </div>
+
+        <ol class="flow-steps" aria-label="施術の流れ">
+
+          <li class="flow-step fade-in">
+            <div class="flow-num" aria-hidden="true">01</div>
+            <div class="flow-content">
+              <h3 class="flow-title">カウンセリング</h3>
+              <p class="flow-desc">
+                お肌のお悩みや体調、アレルギーの有無などを丁寧にヒアリング。
+                お客様のご要望に合わせて、その日の施術プランをご提案します。
+              </p>
+            </div>
+          </li>
+
+          <li class="flow-step fade-in">
+            <div class="flow-num" aria-hidden="true">02</div>
+            <div class="flow-content">
+              <h3 class="flow-title">お着替え・肌チェック</h3>
+              <p class="flow-desc">
+                プライベートルームにてお着替えをいただきます。
+                施術前にお肌の状態をチェックし、使用する化粧品・アイテムを確認します。
+              </p>
+            </div>
+          </li>
+
+          <li class="flow-step fade-in">
+            <div class="flow-num" aria-hidden="true">03</div>
+            <div class="flow-content">
+              <h3 class="flow-title">施術</h3>
+              <p class="flow-desc">
+                ご選択いただいたメニューに沿って施術を行います。
+                施術中もご要望があればお気軽にお申し付けください。
+              </p>
+            </div>
+          </li>
+
+          <li class="flow-step fade-in">
+            <div class="flow-num" aria-hidden="true">04</div>
+            <div class="flow-content">
+              <h3 class="flow-title">アフターカウンセリング</h3>
+              <p class="flow-desc">
+                施術後のお肌の状態をご確認いただき、ホームケアのアドバイスをお伝えします。
+                次回のご予約もこちらで承ります。
+              </p>
+            </div>
+          </li>
+
+        </ol><!-- /.flow-steps -->
+
+      </div><!-- /.container -->
+    </section>
+    <!-- /.flow -->
+
+
+    <!-- ========================================
+         6. スタッフ紹介
+    ======================================== -->
+    <section class="section staff" id="staff">
+      <div class="container">
+
+        <div class="section-header fade-in">
+          <p class="section-label">Staff</p>
+          <h2 class="section-title">スタッフ紹介</h2>
+          <p class="section-desc">経験豊富なスタッフが、心を込めてお迎えします。</p>
+        </div>
+
+        <div class="staff-grid">
+
+          <!-- スタッフ1 -->
+          <article class="staff-card fade-in">
+            <div class="staff-img-wrap">
+              <img
+                src="assets/images/staff01.jpg"
+                alt="エステティシャン 田中葵"
+                class="staff-img"
+                onerror="this.parentElement.classList.add('img-placeholder')"
+              />
+            </div>
+            <div class="staff-info">
+              <p class="staff-role">Esthetician</p>
+              <h3 class="staff-name">田中 葵</h3>
+              <p class="staff-name-en">Aoi Tanaka</p>
+              <p class="staff-bio">
+                エステティシャン歴12年。肌の悩みに真摯に向き合い、
+                一人ひとりに合ったオーダーメイドのケアを提案します。
+                フランスのスキンケアを学んだ経験を活かし、
+                国際的なメソッドで美肌へと導きます。
+              </p>
+              <ul class="staff-tags" aria-label="田中葵の資格・得意分野">
+                <li class="staff-tag">CIDESCO国際ライセンス</li>
+                <li class="staff-tag">フェイシャル専門</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- スタッフ2 -->
+          <article class="staff-card fade-in">
+            <div class="staff-img-wrap">
+              <img
+                src="assets/images/staff02.jpg"
+                alt="セラピスト 佐藤りな"
+                class="staff-img"
+                onerror="this.parentElement.classList.add('img-placeholder')"
+              />
+            </div>
+            <div class="staff-info">
+              <p class="staff-role">Therapist</p>
+              <h3 class="staff-name">佐藤 りな</h3>
+              <p class="staff-name-en">Rina Sato</p>
+              <p class="staff-bio">
+                アロマセラピスト歴8年。ボディトリートメントを専門とし、
+                ストレスや疲労を抱えるお客様の心と体を整えます。
+                リンパドレナージュや深層筋アプローチを組み合わせた
+                独自のメソッドで、多くのリピーターから支持されています。
+              </p>
+              <ul class="staff-tags" aria-label="佐藤りなの資格・得意分野">
+                <li class="staff-tag">IFAアロマセラピスト</li>
+                <li class="staff-tag">ボディケア専門</li>
+              </ul>
+            </div>
+          </article>
+
+        </div><!-- /.staff-grid -->
+
+      </div><!-- /.container -->
+    </section>
+    <!-- /.staff -->
+
+
+    <!-- ========================================
+         7. お客様の声
+    ======================================== -->
+    <section class="section voice" id="voice">
+      <div class="container">
+
+        <div class="section-header fade-in">
+          <p class="section-label">Voice</p>
+          <h2 class="section-title">お客様の声</h2>
+          <p class="section-desc">実際にご来店いただいたお客様からいただいた声をご紹介します。</p>
+        </div>
+
+        <div class="voice-grid">
+
+          <!-- 口コミ1 -->
+          <article class="voice-card fade-in" aria-label="お客様の声 1">
+            <div class="voice-rating" aria-label="評価: 5つ星">
+              <span aria-hidden="true">★★★★★</span>
+            </div>
+            <blockquote class="voice-comment">
+              <p>
+                フェイシャルを受けてから、肌のトーンが全然違います！
+                スタッフさんが丁寧にカウンセリングしてくれて、自分に合ったケアをしてもらえた感じがしました。
+                完全個室なので、周りを気にせずリラックスできたのも嬉しかったです。
+              </p>
+            </blockquote>
+            <footer class="voice-meta">
+              <p class="voice-name">M.K. 様</p>
+              <p class="voice-detail">30代・会社員 / プレミアムフェイシャル</p>
+            </footer>
+          </article>
+
+          <!-- 口コミ2 -->
+          <article class="voice-card fade-in" aria-label="お客様の声 2">
+            <div class="voice-rating" aria-label="評価: 5つ星">
+              <span aria-hidden="true">★★★★★</span>
+            </div>
+            <blockquote class="voice-comment">
+              <p>
+                結婚式の前にブライダルプランを利用しました。
+                当日の肌がいつもより格段につやつやで、メイクのノリも最高でした。
+                友人からも「肌がきれい！」と言われて、本当に通ってよかったと思っています。
+              </p>
+            </blockquote>
+            <footer class="voice-meta">
+              <p class="voice-name">Y.T. 様</p>
+              <p class="voice-detail">20代・教師 / ブライダル1DAYプラン</p>
+            </footer>
+          </article>
+
+          <!-- 口コミ3 -->
+          <article class="voice-card fade-in" aria-label="お客様の声 3">
+            <div class="voice-rating" aria-label="評価: 5つ星">
+              <span aria-hidden="true">★★★★★</span>
+            </div>
+            <blockquote class="voice-comment">
+              <p>
+                デスクワークで肩や背中がガチガチだったのが、ボディトリートメントを受けてすっきり！
+                施術後は体がとても軽く、翌日の仕事のパフォーマンスも上がりました。
+                月に一度の自分へのご褒美にしています。
+              </p>
+            </blockquote>
+            <footer class="voice-meta">
+              <p class="voice-name">A.S. 様</p>
+              <p class="voice-detail">40代・フリーランス / 全身リンパトリートメント</p>
+            </footer>
+          </article>
+
+        </div><!-- /.voice-grid -->
+
+      </div><!-- /.container -->
+    </section>
+    <!-- /.voice -->
+
+
+    <!-- ========================================
+         8. FAQ（アコーディオン）
+    ======================================== -->
+    <section class="section faq" id="faq">
+      <div class="container">
+
+        <div class="section-header fade-in">
+          <p class="section-label">FAQ</p>
+          <h2 class="section-title">よくあるご質問</h2>
+        </div>
+
+        <dl class="faq-list fade-in" aria-label="よくあるご質問">
+
+          <!-- Q1 -->
+          <div class="faq-item">
+            <dt class="faq-question">
+              <button
+                class="faq-toggle"
+                aria-expanded="false"
+                aria-controls="faq-answer-1"
+                id="faq-btn-1"
+              >
+                <span class="faq-q-text">初めてでも予約できますか？</span>
+                <span class="faq-icon" aria-hidden="true">+</span>
+              </button>
+            </dt>
+            <dd class="faq-answer" id="faq-answer-1" aria-labelledby="faq-btn-1" hidden>
+              <p>
+                はい、初めてのお客様も大歓迎です。ご予約はWebフォームまたはお電話にて承っております。
+                初回は事前にカウンセリングシートをご記入いただきますので、
+                ご予約時間の10分前を目安にお越しください。
+              </p>
+            </dd>
+          </div>
+
+          <!-- Q2 -->
+          <div class="faq-item">
+            <dt class="faq-question">
+              <button
+                class="faq-toggle"
+                aria-expanded="false"
+                aria-controls="faq-answer-2"
+                id="faq-btn-2"
+              >
+                <span class="faq-q-text">メイクをしたまま来店できますか？</span>
+                <span class="faq-icon" aria-hidden="true">+</span>
+              </button>
+            </dt>
+            <dd class="faq-answer" id="faq-answer-2" aria-labelledby="faq-btn-2" hidden>
+              <p>
+                はい、そのままお越しいただいて大丈夫です。施術前にサロンでクレンジングを行いますので、
+                ご自身でメイクを落としていただく必要はございません。
+                クレンジングに使用するアイテムについては、アレルギーのある方はご予約時にお知らせください。
+              </p>
+            </dd>
+          </div>
+
+          <!-- Q3 -->
+          <div class="faq-item">
+            <dt class="faq-question">
+              <button
+                class="faq-toggle"
+                aria-expanded="false"
+                aria-controls="faq-answer-3"
+                id="faq-btn-3"
+              >
+                <span class="faq-q-text">キャンセルはいつまで可能ですか？</span>
+                <span class="faq-icon" aria-hidden="true">+</span>
+              </button>
+            </dt>
+            <dd class="faq-answer" id="faq-answer-3" aria-labelledby="faq-btn-3" hidden>
+              <p>
+                前日の18:00までにご連絡いただければキャンセル料はかかりません。
+                当日のキャンセル・ご連絡なしのキャンセルについては、施術料金の50%をいただく場合がございます。
+                ご変更の場合も、なるべくお早めにご連絡ください。
+              </p>
+            </dd>
+          </div>
+
+          <!-- Q4 -->
+          <div class="faq-item">
+            <dt class="faq-question">
+              <button
+                class="faq-toggle"
+                aria-expanded="false"
+                aria-controls="faq-answer-4"
+                id="faq-btn-4"
+              >
+                <span class="faq-q-text">支払い方法は何がありますか？</span>
+                <span class="faq-icon" aria-hidden="true">+</span>
+              </button>
+            </dt>
+            <dd class="faq-answer" id="faq-answer-4" aria-labelledby="faq-btn-4" hidden>
+              <p>
+                現金、クレジットカード（VISA・Mastercard・JCB・AmericanExpress）、
+                交通系ICカード、PayPay、LINE Payにてお支払いいただけます。
+                領収書の発行も承っておりますので、お気軽にお申し付けください。
+              </p>
+            </dd>
+          </div>
+
+          <!-- Q5 -->
+          <div class="faq-item">
+            <dt class="faq-question">
+              <button
+                class="faq-toggle"
+                aria-expanded="false"
+                aria-controls="faq-answer-5"
+                id="faq-btn-5"
+              >
+                <span class="faq-q-text">妊娠中でも施術を受けられますか？</span>
+                <span class="faq-icon" aria-hidden="true">+</span>
+              </button>
+            </dt>
+            <dd class="faq-answer" id="faq-answer-5" aria-labelledby="faq-btn-5" hidden>
+              <p>
+                妊娠中の方は、安全のため一部施術をお断りする場合がございます。
+                ご予約の際に妊娠中であることをお知らせいただければ、
+                ご状態に合わせたメニューをご提案いたします。
+                安定期に入られてからのご来店をおすすめしております。
+              </p>
+            </dd>
+          </div>
+
+        </dl><!-- /.faq-list -->
+
+      </div><!-- /.container -->
+    </section>
+    <!-- /.faq -->
+
+
+    <!-- ========================================
+         9. アクセス
+    ======================================== -->
+    <section class="section access" id="access">
+      <div class="container">
+
+        <div class="section-header fade-in">
+          <p class="section-label">Access</p>
+          <h2 class="section-title">アクセス</h2>
+        </div>
+
+        <div class="access-body">
+
+          <!-- アクセス情報 -->
+          <div class="access-info fade-in">
+            <h3 class="access-salon-name">MELIA Beauty Salon</h3>
+
+            <dl class="access-detail">
+              <div class="access-row">
+                <dt class="access-label">住所</dt>
+                <dd class="access-val">
+                  〒150-0001<br />
+                  東京都渋谷区神宮前1-2-3<br />
+                  MELIA Building 4F
+                </dd>
+              </div>
+              <div class="access-row">
+                <dt class="access-label">営業時間</dt>
+                <dd class="access-val">10:00 〜 20:00</dd>
+              </div>
+              <div class="access-row">
+                <dt class="access-label">定休日</dt>
+                <dd class="access-val">水曜日</dd>
+              </div>
+              <div class="access-row">
+                <dt class="access-label">最寄駅</dt>
+                <dd class="access-val">
+                  東京メトロ 表参道駅 A2出口より<br />
+                  徒歩5分
+                </dd>
+              </div>
+              <div class="access-row">
+                <dt class="access-label">電話</dt>
+                <dd class="access-val">
+                  <a href="tel:0300000000" class="access-tel">03-0000-0000</a>
+                  <span class="access-tel-note">（受付 10:00〜19:00）</span>
+                </dd>
+              </div>
+            </dl>
+
+            <div class="access-img-wrap">
+              <img
+                src="assets/images/salon.jpg"
+                alt="MELIAビューティーサロン外観"
+                class="access-salon-img"
+                onerror="this.parentElement.classList.add('img-placeholder')"
+              />
+            </div>
+          </div>
+
+          <!-- 地図風ダミーボックス -->
+          <div class="access-map fade-in" aria-label="地図（ダミー表示）">
+            <div class="map-placeholder">
+              <div class="map-inner">
+                <div class="map-pin" aria-hidden="true">
+                  <svg width="32" height="40" viewBox="0 0 32 40" fill="none" aria-hidden="true">
+                    <path d="M16 0C7.163 0 0 7.163 0 16C0 28 16 40 16 40C16 40 32 28 32 16C32 7.163 24.837 0 16 0Z" fill="#e0306a"/>
+                    <circle cx="16" cy="16" r="6" fill="white"/>
+                  </svg>
+                </div>
+                <p class="map-label">MELIA Beauty Salon</p>
+                <p class="map-address">東京都渋谷区神宮前1-2-3</p>
+                <p class="map-note">※ 地図はデモ表示です</p>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /.access-body -->
+
+      </div><!-- /.container -->
+    </section>
+    <!-- /.access -->
+
+
+    <!-- ========================================
+         10. 予約CTA
+    ======================================== -->
+    <section class="section reserve-cta" id="reserve">
+      <div class="container">
+
+        <div class="reserve-cta-inner fade-in">
+          <p class="section-label">Reservation</p>
+          <h2 class="reserve-cta-title">ご予約・お問い合わせ</h2>
+          <p class="reserve-cta-desc">
+            ご来店をご希望の方は、お電話またはWebフォームよりご予約ください。<br />
+            初めてのご来店の方もお気軽にどうぞ。
+          </p>
+
+          <!-- 電話番号 -->
+          <div class="reserve-tel-wrap">
+            <a href="tel:0300000000" class="reserve-tel" aria-label="電話で予約: 03-0000-0000">
+              <span class="reserve-tel-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.5 12.07 19.79 19.79 0 0 1 1.15 3.44 2 2 0 0 1 3.13 1.24h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 17z"/>
+                </svg>
+              </span>
+              03-0000-0000
+            </a>
+            <p class="reserve-tel-hours">受付時間 10:00〜19:00（水曜定休）</p>
+          </div>
+
+          <!-- ボタングループ -->
+          <div class="reserve-btn-group">
+            <button
+              class="btn btn-line"
+              aria-label="LINEで予約する"
+              onclick="showReserveDemo()"
+            >
+              <span class="btn-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M12 2C6.48 2 2 6.03 2 11c0 2.85 1.37 5.4 3.52 7.12L4 22l4.14-1.38C9.33 21.17 10.64 21.5 12 21.5c5.52 0 10-4.03 10-9C22 6.03 17.52 2 12 2zM8 12.5H7v-4h1v4zm4 0c-.55 0-1-.45-1-1V9c0-.55.45-1 1-1s1 .45 1 1v2.5c0 .55-.45 1-1 1zm4 0h-1v-2l-1.5 2H13v-4h1v2l1.5-2H17v4z"/>
+                </svg>
+              </span>
+              LINE予約
+            </button>
+            <button
+              class="btn btn-web-reserve"
+              aria-label="Webで予約する"
+              onclick="showReserveDemo()"
+            >
+              Web予約
+            </button>
+          </div>
+
+        </div><!-- /.reserve-cta-inner -->
+
+      </div><!-- /.container -->
+    </section>
+    <!-- /.reserve-cta -->
+
+  </main>
+  <!-- /#main -->
+
+
+  <!-- ========================================
+       フッター
+  ======================================== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+
+      <!-- フッターロゴ -->
+      <div class="footer-logo">
+        <span class="logo-main">MELIA</span>
+        <span class="logo-sub">Beauty Salon</span>
+      </div>
+
+      <!-- フッターナビ -->
+      <nav class="footer-nav" aria-label="フッターナビゲーション">
+        <ul class="footer-nav-list">
+          <li><a href="#concept">Concept</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#price">Price</a></li>
+          <li><a href="#flow">Flow</a></li>
+          <li><a href="#staff">Staff</a></li>
+          <li><a href="#voice">Voice</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#access">Access</a></li>
+        </ul>
+      </nav>
+
+      <!-- SNSリンク（ダミー） -->
+      <div class="footer-sns">
+        <a href="#" class="sns-link" aria-label="Instagram（デモリンク）" onclick="return false;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+          </svg>
+          Instagram
+        </a>
+        <a href="#" class="sns-link" aria-label="Twitter（デモリンク）" onclick="return false;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+          </svg>
+          X (Twitter)
+        </a>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2024 MELIA Beauty Salon. All Rights Reserved.</p>
+        <p class="footer-disclaimer">本サイトはポートフォリオ用の架空サロンサイトです。</p>
+      </div>
+
+    </div><!-- /.footer-inner -->
+  </footer>
+  <!-- /.site-footer -->
+
+
+  <!-- ページトップへ戻るボタン -->
+  <button
+    class="back-to-top"
+    id="back-to-top"
+    aria-label="ページのトップへ戻る"
+    hidden
+  >
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <polyline points="18 15 12 9 6 15"/>
+    </svg>
+  </button>
+
+
+  <!-- 予約デモモーダル -->
+  <div class="modal-overlay" id="reserve-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+    <div class="modal-box">
+      <button class="modal-close" id="modal-close" aria-label="モーダルを閉じる">×</button>
+      <div class="modal-icon" aria-hidden="true">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#e0306a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+          <line x1="16" y1="2" x2="16" y2="6"/>
+          <line x1="8" y1="2" x2="8" y2="6"/>
+          <line x1="3" y1="10" x2="21" y2="10"/>
+        </svg>
+      </div>
+      <h3 class="modal-title" id="modal-title">予約フォームはデモです</h3>
+      <p class="modal-desc">
+        このサイトはポートフォリオ用のデモサイトです。<br />
+        実際の予約はお受けしておりません。
+      </p>
+      <button class="btn btn-primary modal-btn" onclick="closeModal()" aria-label="閉じる">
+        閉じる
+      </button>
+    </div>
+  </div>
+
+
+  <script src="js/main.js"></script>
+</body>
+</html>
