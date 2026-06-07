@@ -2,6 +2,10 @@
 
 表参道の架空プライベートビューティーサロンのポートフォリオ用Webサイトです。
 
+## 公開URL
+
+https://ssk-t0.github.io/MELIA-Beauty-Salon/
+
 ## サイト概要
 
 | 項目 | 内容 |
