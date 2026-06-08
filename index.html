@@ -921,6 +921,7 @@
           <li><a href="#voice">Voice</a></li>
           <li><a href="#faq">FAQ</a></li>
           <li><a href="#access">Access</a></li>
+          <li><button type="button" class="footer-admin-link" onclick="showAdminPanel()">Admin</button></li>
         </ul>
       </nav>
 
@@ -965,7 +966,7 @@
   </button>
 
 
-  <!-- 予約デモモーダル -->
+  <!-- 予約フォームモーダル -->
   <div class="modal-overlay" id="reserve-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
     <div class="modal-box">
       <button class="modal-close" id="modal-close" aria-label="モーダルを閉じる">×</button>
@@ -977,14 +978,122 @@
           <line x1="3" y1="10" x2="21" y2="10"/>
         </svg>
       </div>
-      <h3 class="modal-title" id="modal-title">予約フォームはデモです</h3>
+      <h3 class="modal-title" id="modal-title">Web予約フォーム</h3>
       <p class="modal-desc">
-        このサイトはポートフォリオ用のデモサイトです。<br />
-        実際の予約はお受けしておりません。
+        必要事項をご入力ください。送信後、管理画面に予約内容が保存されます。
       </p>
-      <button class="btn btn-primary modal-btn" onclick="closeModal()" aria-label="閉じる">
-        閉じる
-      </button>
+
+      <form class="reserve-form" id="reserve-form">
+        <div class="form-grid">
+          <label class="form-field">
+            <span>お名前</span>
+            <input type="text" name="name" autocomplete="name" required />
+          </label>
+
+          <label class="form-field">
+            <span>電話番号</span>
+            <input type="tel" name="tel" autocomplete="tel" required />
+          </label>
+
+          <label class="form-field form-field-full">
+            <span>メールアドレス</span>
+            <input type="email" name="email" autocomplete="email" required />
+          </label>
+
+          <label class="form-field">
+            <span>ご希望メニュー</span>
+            <select name="menu" required>
+              <option value="">選択してください</option>
+              <option value="Facial Care">Facial Care</option>
+              <option value="Body Treatment">Body Treatment</option>
+              <option value="Bridal Beauty">Bridal Beauty</option>
+              <option value="カウンセリング">カウンセリング</option>
+            </select>
+          </label>
+
+          <label class="form-field">
+            <span>ご希望日</span>
+            <input type="date" name="date" id="reserve-date" required />
+          </label>
+
+          <label class="form-field">
+            <span>ご希望時間</span>
+            <select name="time" required>
+              <option value="">選択してください</option>
+              <option value="10:00">10:00</option>
+              <option value="11:00">11:00</option>
+              <option value="12:00">12:00</option>
+              <option value="13:00">13:00</option>
+              <option value="14:00">14:00</option>
+              <option value="15:00">15:00</option>
+              <option value="16:00">16:00</option>
+              <option value="17:00">17:00</option>
+              <option value="18:00">18:00</option>
+            </select>
+          </label>
+
+          <label class="form-field">
+            <span>ご来店回数</span>
+            <select name="visitType" required>
+              <option value="初めて">初めて</option>
+              <option value="リピーター">リピーター</option>
+            </select>
+          </label>
+
+          <label class="form-field form-field-full">
+            <span>ご相談内容・ご要望</span>
+            <textarea name="message" rows="4" placeholder="お肌のお悩み、ご希望などがあればご記入ください。"></textarea>
+          </label>
+        </div>
+
+        <p class="form-note">※ この予約はこのブラウザ内に保存されます。</p>
+        <p class="form-success" id="reserve-success" role="status" hidden></p>
+
+        <div class="modal-actions">
+          <button type="submit" class="btn btn-primary modal-btn">予約する</button>
+          <button type="button" class="btn btn-outline modal-btn" onclick="closeModal()">閉じる</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 管理画面モーダル -->
+  <div class="modal-overlay" id="admin-modal" role="dialog" aria-modal="true" aria-labelledby="admin-title" hidden>
+    <div class="modal-box admin-modal-box">
+      <button class="modal-close" id="admin-close" aria-label="管理画面を閉じる">×</button>
+      <p class="section-label admin-label">Admin</p>
+      <h3 class="modal-title" id="admin-title">予約管理画面</h3>
+      <p class="modal-desc">
+        Web予約フォームから送信された予約を確認できます。
+      </p>
+
+      <div class="admin-toolbar">
+        <p class="admin-count" id="admin-count">予約 0件</p>
+        <button type="button" class="btn btn-outline admin-refresh" onclick="renderReservations()">更新</button>
+      </div>
+
+      <div class="admin-empty" id="admin-empty" hidden>
+        まだ予約はありません。
+      </div>
+
+      <div class="admin-table-wrap" id="admin-table-wrap" hidden>
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>受付番号</th>
+              <th>日時</th>
+              <th>お客様</th>
+              <th>メニュー</th>
+              <th>連絡先</th>
+              <th>状態</th>
+              <th>操作</th>
+            </tr>
+          </thead>
+          <tbody id="admin-reservation-list"></tbody>
+        </table>
+      </div>
+
+      <p class="form-note">※ 管理データはこのブラウザのみに保存されます。</p>
     </div>
   </div>
 
