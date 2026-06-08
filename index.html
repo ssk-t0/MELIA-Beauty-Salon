@@ -1059,43 +1059,11 @@
     </div>
   </div>
 
-  <!-- 管理画面モーダル -->
+  <!-- 管理画面アプリ -->
   <div class="modal-overlay" id="admin-modal" role="dialog" aria-modal="true" aria-labelledby="admin-title" hidden>
-    <div class="modal-box admin-modal-box">
+    <div class="admin-app">
       <button class="modal-close" id="admin-close" aria-label="管理画面を閉じる">×</button>
-      <p class="section-label admin-label">Admin</p>
-      <h3 class="modal-title" id="admin-title">予約管理画面</h3>
-      <p class="modal-desc">
-        Web予約フォームから送信された予約を確認できます。
-      </p>
-
-      <div class="admin-toolbar">
-        <p class="admin-count" id="admin-count">予約 0件</p>
-        <button type="button" class="btn btn-outline admin-refresh" onclick="renderReservations()">更新</button>
-      </div>
-
-      <div class="admin-empty" id="admin-empty" hidden>
-        まだ予約はありません。
-      </div>
-
-      <div class="admin-table-wrap" id="admin-table-wrap" hidden>
-        <table class="admin-table">
-          <thead>
-            <tr>
-              <th>受付番号</th>
-              <th>日時</th>
-              <th>お客様</th>
-              <th>メニュー</th>
-              <th>連絡先</th>
-              <th>状態</th>
-              <th>操作</th>
-            </tr>
-          </thead>
-          <tbody id="admin-reservation-list"></tbody>
-        </table>
-      </div>
-
-      <p class="form-note">※ 管理データはこのブラウザのみに保存されます。</p>
+      <div id="admin-app-root"></div>
     </div>
   </div>
 
