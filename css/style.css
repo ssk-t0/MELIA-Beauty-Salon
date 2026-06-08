@@ -93,6 +93,7 @@
 html {
   scroll-behavior: smooth;     /* スムーススクロールはJSで制御するがCSSでも指定 */
   font-size: 16px;
+  overflow-x: hidden;
 }
 
 body {
@@ -103,6 +104,7 @@ body {
   line-height: 1.8;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 img {
@@ -2849,24 +2851,70 @@ button {
   }
 
   .modal-overlay {
-    padding: var(--space-sm);
+    align-items: flex-start;
+    justify-content: center;
+    padding: max(0.75rem, env(safe-area-inset-top)) 0.75rem max(0.75rem, env(safe-area-inset-bottom));
+    overflow-x: hidden;
+    overflow-y: auto;
   }
 
   .modal-box {
-    padding: var(--space-md) var(--space-sm);
+    width: 100%;
+    max-width: none;
+    max-height: none;
+    margin: 0 auto;
+    padding: 2.8rem 1rem 1.2rem;
     border-radius: var(--radius-lg);
+    overflow-x: hidden;
   }
 
   .form-grid {
     grid-template-columns: 1fr;
+    gap: 0.85rem;
+    min-width: 0;
+  }
+
+  .form-field {
+    min-width: 0;
+  }
+
+  .form-field input,
+  .form-field select,
+  .form-field textarea,
+  .admin-status {
+    min-width: 0;
+    font-size: 16px;
+    padding: 0.72rem 0.78rem;
+  }
+
+  .modal-title {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .modal-desc {
+    font-size: 0.82rem;
+    line-height: 1.75;
+    margin-bottom: 1.2rem;
+  }
+
+  .modal-close {
+    top: 0.72rem;
+    right: 0.72rem;
   }
 
   .modal-actions {
     flex-direction: column;
+    gap: 0.6rem;
   }
 
   .modal-actions .btn {
     width: 100%;
+    max-width: none;
+  }
+
+  .modal-btn {
+    padding: 0.78rem 1rem;
   }
 
   .admin-toolbar {
