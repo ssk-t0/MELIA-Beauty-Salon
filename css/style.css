@@ -1837,6 +1837,8 @@ button {
   align-items: center;
   justify-content: center;
   padding: var(--space-md);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .modal-overlay[hidden] {
@@ -2930,6 +2932,14 @@ button {
     width: calc(100vw - 1rem);
     height: calc(100svh - 1rem);
     border-radius: var(--radius-lg);
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  #admin-app-root,
+  .admin-shell {
+    min-height: auto;
   }
 
   .admin-shell {
@@ -2960,7 +2970,8 @@ button {
   .admin-main {
     max-height: none;
     min-height: 0;
-    flex: 1;
+    flex: 0 0 auto;
+    overflow: visible;
   }
 
   .admin-header {
@@ -2976,6 +2987,7 @@ button {
 
   .admin-content {
     padding: 1rem;
+    overflow: visible;
   }
 
   .admin-grid-cards,
